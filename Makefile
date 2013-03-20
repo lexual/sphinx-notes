@@ -1,6 +1,8 @@
 # Makefile for Sphinx documentation
 #
 
+S3_BUCKET = 'notes.lexual.com'
+
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
@@ -151,3 +153,8 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+
+s3_upload: html epub latexpdf
+	s3cmd sync $(BUILDDIR)/html/ s3://$(S3_BUCKET) --acl-public --delete-removed
+	s3cmd put $(BUILDDIR)/epub/LexualsNotes.epub s3://$(S3_BUCKET)/epub/LexualsNotes.epub --acl-public --delete-removed
+	s3cmd put $(BUILDDIR)/latex/LexualsNotes.pdf s3://$(S3_BUCKET)/latex/LexualsNotes.pdf --acl-public --delete-removed

@@ -11,7 +11,11 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   foo/math
 
+`pdf <../latex/LexualsNotes.pdf>`_
+
+`epub <../epub/LexualsNotes.epub>`_
 
 Indices and tables
 ==================
