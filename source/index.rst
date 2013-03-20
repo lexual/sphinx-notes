@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    math
+   notes_x
 
 `pdf <../latex/LexualsNotes.pdf>`_
 
