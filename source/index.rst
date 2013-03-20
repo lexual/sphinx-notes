@@ -11,7 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   foo/math
+   math
 
 `pdf <../latex/LexualsNotes.pdf>`_
 
