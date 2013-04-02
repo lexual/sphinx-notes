@@ -14,6 +14,8 @@ Contents:
    math
    notes_x
 
+`R Cookbook notes for Python users <tech/r_numpy_pandas_cookbook.html>`_
+
 `pdf <../latex/LexualsNotes.pdf>`_
 
 `epub <../epub/LexualsNotes.epub>`_
@@ -24,4 +26,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
