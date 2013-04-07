@@ -7,7 +7,7 @@ Daniel T. Kaplan, 1st ed, 2009
 20 chapters.20 chapters.
 
 ********************************************************
-1 - Statistical Models
+1 - Statistical Models [complete]
 ********************************************************
 
 1.1 - Models and their Purposes
@@ -47,31 +47,88 @@ Daniel T. Kaplan, 1st ed, 2009
 
     is.na(x)
 
+    seq(start, end) # like range() in python
+    seq(start, end, by=2)   amount to step by.
+
+    # defining function.
+    f = function(x) {3*x^2 + 2}
+
+    ISM.Rdata # R customizations for this book.
+
 ********************************************************
-2 - X
+2 - Data: Cases, Variables, Samples
 ********************************************************
 
-2.1 - Y
+case = row.
+
+
+2.1 - Kinds of variables.
 =======================================================
 
-2.2 - Y
+levels: set of values a categorical variable can take.
+
+ordinal:
+    categorical variable were levels can be ordered.
+    e.g. strong disagree, disagree, neutral, agree, etc.
+
+2.2 - Data Frames and the Unit of Analyis
 =======================================================
 
-2.3 - Y
+unit of analysis:
+    What you look at. e.g. school, class, student, etc.
+
+2.3 - Populations and Samples.
 =======================================================
 
-2.4 - Y
+sample:
+    a selection from the population.
+
+census: 
+    sample is a population.
+
+simple random sample:
+    each member of population equally likely to be included in the sample.
+
+sampling frame:
+    list of entire set of possible cases. (i.e. population)
+
+2.4 - Longitudinal and Cross-Sectional Samples
 =======================================================
+
+logitudinal: same individuals tracked over time.
+
+    hdd = ISMdata("hdd-minneapolis.csv")
+
 
 2.5 - Y
 =======================================================
 
-********************************************************
-3 - X
-********************************************************
+    names(df)   # what are the columns?
+    head(df)
 
-3.1 - Y
+factor:
+    categorical variable.
+
+    df$minutes = df$seconds / 60
+
+    women = subset(df, sex=='F')
+
+    BM: p42
+
+********************************************************
+3 - Describing Variation
+*******************************************************
+
+response variable
+
+explanatory variables
+
+3.1 - Coverage intervals
 =======================================================
+
+e.g. 25th percentile.
+
+25th to 75th: 50-percent coverage interval.
 
 3.2 - Y
 =======================================================
