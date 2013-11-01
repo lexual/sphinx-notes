@@ -1,3 +1,11 @@
+Note
+==========
+
+* These notes contain translations from R into Pandas/Numpy/Scipy.
+* Notes are based upon Paul Teetor's R Cookbook published by
+  O'Reilly
+* http://shop.oreilly.com/product/9780596809164.do
+
 Assumptions
 ===========
 
