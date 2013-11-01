@@ -336,7 +336,7 @@ R::
 Python::
 
     def cv(x):
-        np.std(x, ddof=1) / np.mean(x)
+        return np.std(x, ddof=1) / np.mean(x)
 
     cv(arange(1, 11)) # .55048
 
