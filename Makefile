@@ -155,6 +155,6 @@ doctest:
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
 s3_upload: html epub latexpdf
-	s3cmd sync $(BUILDDIR)/html/ s3://$(S3_BUCKET) --acl-public --delete-removed
+	s3cmd sync $(BUILDDIR)/html/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type --no-mime-magic
 	s3cmd put $(BUILDDIR)/epub/LexualsNotes.epub s3://$(S3_BUCKET)/epub/LexualsNotes.epub --acl-public --delete-removed
 	s3cmd put $(BUILDDIR)/latex/LexualsNotes.pdf s3://$(S3_BUCKET)/latex/LexualsNotes.pdf --acl-public --delete-removed
